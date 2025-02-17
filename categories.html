@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+  :root {
+  --primary: rgb(60, 99, 60);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('assests/pexels-petros-skordas-125319420-9984796.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* Header Styles */
+header {
+    position: absolute;
+    top: 148px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 20 !important;
+    background: var(--primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Categories Section */
+.categories-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.categories-container h1 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+.category-overlay h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.category-overlay .read-more {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.category-overlay .read-more:hover {
+  background: #4a7c4a;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .category-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .category-overlay h3 {
+    font-size: 20px;
+  }
+
+  .category-overlay .read-more {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+</style>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Culinary Canvas</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Categories Section -->
+  <div class="categories-container">
+    <h1>Explore Our Categories</h1>
+    <div class="categories-grid">
+      <!-- Main Courses -->
+      <div class="category-card">
+        <img src="assests/pexels-dana-tentis-118658-725991.jpg" alt="Main Courses">
+        <div class="category-overlay">
+          <h3>Main Courses</h3>
+          <a href="main.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="category-card">
+        <img src="assests/pexels-alesiakozik-6546019.jpg" alt="Desserts">
+        <div class="category-overlay">
+          <h3>Desserts</h3>
+          <a href="dessert.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Healthy Eats -->
+      <div class="category-card">
+        <img src="assests/pexels-vitaliy-haiduk-326720599-17308510.jpg" alt="Healthy Eats">
+        <div class="category-overlay">
+          <h3>Healthy Eats</h3>
+          <a href="healthy.html" class="read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- International Cuisine -->
+      <div class="category-card">
+        <img src="assests/pexels-valeriya-29653134.jpg" alt="International Cuisine">
+        <div class="category-overlay">
+          <h3>International Cuisine</h3>
+          <a href="cuisine.html" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

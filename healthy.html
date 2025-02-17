@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Nutrient-rich Quinoa Buddha Bowl with roasted vegetables, chickpeas, and creamy tahini dressing. Perfect for meal prep!">
+    <title>Quinoa Buddha Bowl</title>
+    <style>
+        body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px; 
+}
+
+.recipe-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px; 
+  flex-wrap: wrap; 
+}
+
+.info-item {
+  text-align: center;
+  flex: 1 1 100px; 
+  margin: 10px 0; 
+}
+
+.info-item span {
+  display: block;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.ingredients, .instructions, .nutrition {
+  background-color: #f8f9fa;
+  padding: 15px; 
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+h2 {
+  color: #2ecc71;
+  border-bottom: 2px solid #2ecc71;
+  padding-bottom: 10px;
+  margin-bottom: 15px; 
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.tip {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px; 
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.nutrition-item {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  body {
+    padding: 15px; 
+  }
+
+  .recipe-card {
+    padding: 15px; 
+  }
+
+  .header {
+    margin-bottom: 15px; 
+  }
+
+  .recipe-image {
+    max-width: 100%;
+  }
+
+  .recipe-info {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+  }
+
+  .info-item {
+    flex: 1 1 auto; 
+  }
+
+  .ingredients, .instructions, .nutrition {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em; 
+  }
+
+  .tip {
+    padding: 10px; 
+  }
+
+  .nutrition-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-image {
+    max-width: 100%; 
+  }
+
+  .recipe-info {
+    padding: 10px; 
+  }
+
+  .ingredients, .instructions, .nutrition {
+    padding: 10px; 
+  }
+
+  h2 {
+    font-size: 1.3em; 
+  }
+
+  .tip {
+    padding: 10px; 
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="recipe-card">
+        <div class="header">
+            <h1>Quinoa Buddha Bowl</h1>
+            <p>A nourishing bowl packed with protein, fiber, and essential nutrients!</p>
+        </div>
+
+        <div class="recipe-image">
+            <img src="assests/pexels-loquellano-16123121.jpg" alt="Colorful Quinoa Buddha Bowl with roasted vegetables" />
+        </div>
+
+        <div class="recipe-info">
+            <div class="info-item">
+                <span>Prep Time</span>
+                20 mins
+            </div>
+            <div class="info-item">
+                <span>Cook Time</span>
+                30 mins
+            </div>
+            <div class="info-item">
+                <span>Total Time</span>
+                50 mins
+            </div>
+            <div class="info-item">
+                <span>Serves</span>
+                4 bowls
+            </div>
+        </div>
+
+        <div class="nutrition">
+            <h2>Nutrition Information (per serving)</h2>
+            <div class="nutrition-grid">
+                <div class="nutrition-item">
+                    <span>Calories:</span>
+                    <strong>425 kcal</strong>
+                </div>
+                <div class="nutrition-item">
+                    <span>Protein:</span>
+                    <strong>15g</strong>
+                </div>
+                <div class="nutrition-item">
+                    <span>Carbohydrates:</span>
+                    <strong>58g</strong>
+                </div>
+                <div class="nutrition-item">
+                    <span>Fiber:</span>
+                    <strong>12g</strong>
+                </div>
+                <div class="nutrition-item">
+                    <span>Healthy Fats:</span>
+                    <strong>18g</strong>
+                </div>
+                <div class="nutrition-item">
+                    <span>Iron:</span>
+                    <strong>4.2mg</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <h3>For the Bowl Base:</h3>
+            <ul>
+                <li>1 cup quinoa, rinsed</li>
+                <li>2 cups water or vegetable broth</li>
+                <li>1 can (15 oz) chickpeas, drained and rinsed</li>
+                <li>2 cups kale, chopped</li>
+                <li>1 sweet potato, cubed</li>
+                <li>2 cups broccoli florets</li>
+                <li>1 red bell pepper, sliced</li>
+                <li>1 cup cherry tomatoes</li>
+                <li>1 avocado, sliced</li>
+                <li>¼ cup pumpkin seeds</li>
+            </ul>
+            <h3>For the Tahini Dressing:</h3>
+            <ul>
+                <li>¼ cup tahini</li>
+                <li>2 tablespoons lemon juice</li>
+                <li>1 tablespoon maple syrup</li>
+                <li>1 clove garlic, minced</li>
+                <li>Water to thin</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+            <h3>Seasoning for Vegetables:</h3>
+            <ul>
+                <li>2 tablespoons olive oil</li>
+                <li>1 teaspoon cumin</li>
+                <li>1 teaspoon paprika</li>
+                <li>½ teaspoon turmeric</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Preheat oven to 400°F (200°C). Line two baking sheets with parchment paper.</li>
+                <li>Cook quinoa in water or broth according to package instructions. Fluff with fork when done.</li>
+                <li>Toss sweet potato, broccoli, and bell pepper with olive oil and seasonings. Spread on baking sheets.</li>
+                <li>Roast vegetables for 20-25 minutes, stirring halfway through.</li>
+                <li>Meanwhile, prepare the dressing: Whisk together tahini, lemon juice, maple syrup, garlic, and enough water to reach desired consistency.</li>
+                <li>Massage kale with a little olive oil and salt until softened.</li>
+                <li>Assemble bowls: Start with quinoa base, arrange roasted vegetables, chickpeas, kale, cherry tomatoes, and avocado.</li>
+                <li>Drizzle with tahini dressing and sprinkle with pumpkin seeds.</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>Healthy Eating Tips:</strong>
+            <ul>
+                <li>This bowl is rich in plant-based protein, fiber, and healthy fats</li>
+                <li>Meal prep friendly: Prepare components in advance and assemble when ready to eat</li>
+                <li>For extra protein, add grilled tofu or tempeh</li>
+                <li>Keep dressing separate if preparing in advance</li>
+                <li>Customize with seasonal vegetables to maximize nutrients and freshness</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px; color: #777;">
+        &copy; 2025 Healthy Eats Collection. All rights reserved.
+    </footer>
+</body>
+</html>

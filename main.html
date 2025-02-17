@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Classic Milanese Osso Buco with Saffron Risotto - A tender veal shank braised in white wine and served with creamy saffron-infused risotto.">
+    <title>Osso Buco with Saffron Risotto</title>
+    <style>
+        body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px; 
+}
+
+.recipe-image {
+  width: 500px; 
+  height: 500px; 
+  border-radius: 10px;
+  margin: 0 auto 20px auto; 
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px; 
+  flex-wrap: wrap; 
+}
+
+.info-item {
+  text-align: center;
+  flex: 1 1 100px; 
+  margin: 10px 0; 
+}
+
+.info-item span {
+  display: block;
+  font-weight: bold;
+  color: #8B4513;
+}
+
+.ingredients, .instructions {
+  background-color: #f8f9fa;
+  padding: 15px; 
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+h2 {
+  color: #8B4513;
+  border-bottom: 2px solid #8B4513;
+  padding-bottom: 10px;
+  margin-bottom: 15px; 
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.tip {
+  background-color: #FFF3E0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px; 
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  body {
+    padding: 15px; 
+  }
+
+  .recipe-card {
+    padding: 15px; 
+  }
+
+  .header {
+    margin-bottom: 15px; 
+  }
+
+  .recipe-info {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+  }
+
+  .info-item {
+    flex: 1 1 auto; 
+  }
+
+  .ingredients, .instructions {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em; 
+  }
+
+  .tip {
+    padding: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-image {
+    max-width: 100%; 
+  }
+
+  .recipe-info {
+    padding: 10px; 
+  }
+
+  .ingredients, .instructions {
+    padding: 10px; 
+  }
+
+  h2 {
+    font-size: 1.3em; 
+  }
+
+  .tip {
+    padding: 10px; 
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="recipe-card">
+        <div class="header">
+            <h1>Osso Buco with Saffron Risotto</h1>
+            <p>Classic Milanese braised veal shanks with creamy saffron risotto (Osso Buco alla Milanese)</p>
+        </div>
+
+        <div class="recipe-image">
+            <img src="assests/pexels-alexanderafan-28446393.jpg" alt="Osso Buco with Saffron Risotto" />
+        </div>
+
+        <div class="recipe-info">
+            <div class="info-item">
+                <span>Prep Time</span>
+                45 mins
+            </div>
+            <div class="info-item">
+                <span>Cook Time</span>
+                2.5 hours
+            </div>
+            <div class="info-item">
+                <span>Total Time</span>
+                3.25 hours
+            </div>
+            <div class="info-item">
+                <span>Serves</span>
+                6 people
+            </div>
+        </div>
+
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <h3>For the Osso Buco:</h3>
+            <ul>
+                <li>6 veal shanks (about 3 inches thick)</li>
+                <li>1 cup all-purpose flour for dredging</li>
+                <li>4 tablespoons olive oil</li>
+                <li>2 medium onions, finely diced</li>
+                <li>2 carrots, finely diced</li>
+                <li>2 celery stalks, finely diced</li>
+                <li>4 cloves garlic, minced</li>
+                <li>2 cups dry white wine</li>
+                <li>2 cups veal or chicken stock</li>
+                <li>2 bay leaves</li>
+                <li>2 sprigs fresh thyme</li>
+                <li>2 sprigs fresh rosemary</li>
+                <li>Salt and freshly ground black pepper</li>
+            </ul>
+            <h3>For the Gremolata:</h3>
+            <ul>
+                <li>Zest of 2 lemons</li>
+                <li>4 cloves garlic, finely minced</li>
+                <li>½ cup fresh parsley, finely chopped</li>
+            </ul>
+            <h3>For the Saffron Risotto:</h3>
+            <ul>
+                <li>2 cups Arborio rice</li>
+                <li>1 large pinch saffron threads</li>
+                <li>6 cups hot chicken stock</li>
+                <li>1 medium onion, finely diced</li>
+                <li>½ cup dry white wine</li>
+                <li>4 tablespoons butter</li>
+                <li>½ cup freshly grated Parmigiano-Reggiano</li>
+                <li>Salt to taste</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <h3>For the Osso Buco:</h3>
+            <ol>
+                <li>Season veal shanks generously with salt and pepper, then dredge in flour, shaking off excess.</li>
+                <li>Heat olive oil in a large Dutch oven over medium-high heat. Brown veal shanks on all sides until golden brown (about 8 minutes per side). Remove and set aside.</li>
+                <li>In the same pot, reduce heat to medium and add onions, carrots, and celery. Cook until softened (about 8 minutes).</li>
+                <li>Add garlic and cook for another minute until fragrant.</li>
+                <li>Pour in white wine, scraping up any brown bits from the bottom of the pot. Simmer until reduced by half.</li>
+                <li>Return veal shanks to the pot. Add stock, bay leaves, thyme, and rosemary.</li>
+                <li>Bring to a simmer, cover, and cook on low heat for 2 hours or until meat is very tender.</li>
+            </ol>
+
+            <h3>For the Saffron Risotto:</h3>
+            <ol>
+                <li>Steep saffron in 1/2 cup hot chicken stock for 10 minutes.</li>
+                <li>In a separate pot, heat 2 tablespoons butter and cook onion until softened.</li>
+                <li>Add rice and toast for 2-3 minutes until lightly toasted.</li>
+                <li>Add wine and stir until absorbed.</li>
+                <li>Add hot stock one ladle at a time, stirring constantly and waiting for each addition to be absorbed before adding more.</li>
+                <li>After about 18 minutes, add saffron mixture.</li>
+                <li>Cook until rice is al dente (about 20-22 minutes total).</li>
+                <li>Remove from heat, stir in remaining butter and Parmigiano-Reggiano.</li>
+            </ol>
+
+            <h3>For the Gremolata and Service:</h3>
+            <ol>
+                <li>Mix lemon zest, garlic, and parsley together.</li>
+                <li>Serve osso buco over saffron risotto, topped with gremolata.</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>Tips:</strong>
+            <ul>
+                <li>Ask your butcher to tie the veal shanks around the middle with kitchen twine to help them keep their shape while cooking.</li>
+                <li>The marrow inside the bones is considered a delicacy - provide small spoons for guests to enjoy it.</li>
+                <li>For the best risotto, use only high-quality Carnaroli or Arborio rice and real Parmigiano-Reggiano.</li>
+                <li>The osso buco can be made a day ahead and reheated gently before serving.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px; color: #777;">
+        &copy; 2025 Italian Culinary Collection. All rights reserved.
+    </footer>
+</body>
+</html>

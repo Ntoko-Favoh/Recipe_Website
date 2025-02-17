@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Authentic Thai Green Curry recipe with coconut milk, vegetables, and your choice of protein. A perfect balance of sweet, spicy, and savory flavors!">
+    <title>Thai Green Curry</title>
+    <style>
+        body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px; 
+}
+
+.recipe-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px; 
+  flex-wrap: wrap; 
+}
+
+.info-item {
+  text-align: center;
+  flex: 1 1 100px; 
+  margin: 10px 0; 
+}
+
+.info-item span {
+  display: block;
+  font-weight: bold;
+  color: #45B649;
+}
+
+.ingredients, .instructions {
+  background-color: #f8f9fa;
+  padding: 15px; 
+  border-radius: 8px;
+  margin-bottom: 15px; 
+}
+
+h2 {
+  color: #45B649;
+  border-bottom: 2px solid #45B649;
+  padding-bottom: 10px;
+  margin-bottom: 15px; 
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.tip {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px; 
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  body {
+    padding: 15px; 
+  }
+
+  .recipe-card {
+    padding: 15px;
+  }
+
+  .header {
+    margin-bottom: 15px; 
+  }
+
+  .recipe-image {
+    max-width: 100%; 
+  }
+
+  .recipe-info {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px; 
+  }
+
+  .info-item {
+    flex: 1 1 auto; 
+  }
+
+  .ingredients, .instructions {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em; 
+  }
+
+  .tip {
+    padding: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-image {
+    max-width: 100%; 
+  }
+
+  .recipe-info {
+    padding: 10px; 
+  }
+
+  .ingredients, .instructions {
+    padding: 10px; 
+  }
+
+  h2 {
+    font-size: 1.3em; 
+  }
+
+  .tip {
+    padding: 10px; 
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="recipe-card">
+        <div class="header">
+            <h1>Thai Green Curry</h1>
+            <p>A fragrant, creamy curry with the perfect balance of sweet, spicy, and savory flavors!</p>
+        </div>
+
+        <div class="recipe-image">
+            <img src="assests/pexels-shameel-mukkath-3421394-10296231.jpg" alt="Thai Green Curry with rice and fresh herbs" />
+        </div>
+
+        <div class="recipe-info">
+            <div class="info-item">
+                <span>Prep Time</span>
+                30 mins
+            </div>
+            <div class="info-item">
+                <span>Cook Time</span>
+                25 mins
+            </div>
+            <div class="info-item">
+                <span>Total Time</span>
+                55 mins
+            </div>
+            <div class="info-item">
+                <span>Serves</span>
+                4-6 people
+            </div>
+        </div>
+
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <h3>For the Curry Paste (or use 4-5 tbsp store-bought):</h3>
+            <ul>
+                <li>15 green Thai chilies, deseeded</li>
+                <li>2 shallots, roughly chopped</li>
+                <li>4 cloves garlic</li>
+                <li>2 stalks lemongrass, tender parts only</li>
+                <li>1 thumb-sized piece galangal</li>
+                <li>1 bunch coriander/cilantro roots and stems</li>
+                <li>1 lime, zest only</li>
+                <li>1 tsp cumin seeds</li>
+                <li>1 tsp coriander seeds</li>
+                <li>1 tsp white peppercorns</li>
+                <li>1 tsp shrimp paste (omit for vegetarian version)</li>
+            </ul>
+            <h3>For the Curry:</h3>
+            <ul>
+                <li>2 cans (400ml each) coconut milk</li>
+                <li>2 tbsp vegetable oil</li>
+                <li>500g chicken, tofu, or mixed vegetables</li>
+                <li>2 tbsp palm sugar (or brown sugar)</li>
+                <li>3 tbsp fish sauce (or soy sauce for vegetarian version)</li>
+                <li>4-5 kaffir lime leaves</li>
+                <li>1 cup Thai basil leaves</li>
+                <li>2 Japanese eggplants, cut into chunks</li>
+                <li>1 cup bamboo shoots</li>
+                <li>2-3 bird's eye chilies (optional)</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>If making curry paste from scratch, toast cumin and coriander seeds in a dry pan until fragrant. Grind together with white peppercorns.</li>
+                <li>In a food processor or mortar and pestle, pound all curry paste ingredients together until a fine paste forms.</li>
+                <li>In a large wok or pot, heat vegetable oil over medium heat. Add 4-5 tablespoons of curry paste and fry until fragrant, about 2-3 minutes.</li>
+                <li>Add 1 cup of coconut milk (the thick part from the top of the can). Cook until oil separates and the mixture becomes fragrant, about 5 minutes.</li>
+                <li>Add your choice of protein (chicken, tofu, etc.) and cook until nearly done.</li>
+                <li>Pour in remaining coconut milk, palm sugar, and fish sauce. Add kaffir lime leaves.</li>
+                <li>Add eggplants and bamboo shoots. Simmer for 10-15 minutes until vegetables are tender.</li>
+                <li>Taste and adjust seasoning with more fish sauce or palm sugar if needed.</li>
+                <li>Turn off heat and stir in Thai basil leaves.</li>
+                <li>Serve hot with jasmine rice, garnished with extra Thai basil and sliced chilies if desired.</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>Tips:</strong>
+            <ul>
+                <li>For the best flavor, use full-fat coconut milk and avoid shaking the can before opening.</li>
+                <li>Adjust the amount of curry paste based on your spice preference.</li>
+                <li>If using store-bought paste, Thai brands like Mae Ploy or Maesri are recommended.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px; color: #777;">
+        &copy; 2025 Global Recipe Collection. All rights reserved.
+    </footer>
+</body>
+</html>

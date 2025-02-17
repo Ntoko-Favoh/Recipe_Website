@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+ :root {
+  --primary: rgb(60, 99, 60);
+  --hover-color: #ffcc00;
+  --text-dark: #333;
+  --white: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('assests/pexels-petros-skordas-125319420-9984796.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Header Styles */
+  header {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 20 !important;
+    background: var(--primary);
+    border-radius: 0%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  header nav ul li a:hover {
+    color: #ffcc00;
+  }
+
+  /* About Container */
+  .about-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* About Image */
+.about-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 50%; 
+  max-width: 400px; 
+  aspect-ratio: 1 / 1; 
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  animation: tiltImage 5s infinite ease-in-out alternate; 
+}
+
+@keyframes tiltImage {
+  from {
+    transform: rotate(-10deg); 
+  }
+  to {
+    transform: rotate(10deg); 
+  }
+}
+
+  /* About Text */
+  .about-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .about-text h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+</style>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Culinary Canvas</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Us Section -->
+  <div class="about-container">
+    <div class="about-content">
+      <!-- Left Side: Rotating Image -->
+      <div class="about-image">
+        <img src="assests/pexels-alisha-mishra-579430-1346214.jpg" alt="About Us Image"> <!-- Replace with your image -->
+      </div>
+
+      <!-- Right Side: Paragraph -->
+      <div class="about-text">
+        <h1>About Us</h1>
+        <p>
+          Welcome to our world of flavors! We are passionate about creating delicious recipes that bring people together. 
+          Our mission is to inspire you to explore new culinary horizons and make cooking an enjoyable experience. 
+          Whether you're a seasoned chef or a beginner in the kitchen, we have something for everyone. 
+          Join us on this journey as we share our love for food, creativity, and community.
+        </p>
+        <p>
+          Our team is dedicated to providing you with the best recipes, tips, and tricks to elevate your cooking game. 
+          From hearty meals to sweet treats, we’ve got you covered. Let’s create unforgettable memories, one dish at a time!
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

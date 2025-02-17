@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+  :root {
+  --primary: rgb(60, 99, 60);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('assests/pexels-petros-skordas-125319420-9984796.jpg');
+  background-size: cover;
+  background-position: center; 
+  min-height: 100vh; 
+  overflow-x: hidden; 
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Recipes Section */
+.recipes-container {
+  position: relative;
+  top: 60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px; 
+}
+
+.recipes-container h1 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.recipe-card h3 {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.recipe-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px; 
+  }
+
+  header .logo {
+    font-size: 20px; 
+  }
+
+  header nav ul {
+    gap: 10px; 
+  }
+
+  header nav ul li a {
+    font-size: 14px; 
+  }
+
+  .recipes-container {
+    top: 120px; 
+  }
+
+  .recipes-container h1 {
+    font-size: 28px; 
+    margin-bottom: 30px; 
+  }
+
+  .recipes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  }
+
+  .recipe-card {
+    padding: 15px; 
+  }
+
+  .recipe-card img {
+    height: 150px; 
+  }
+
+  .recipe-card h3 {
+    font-size: 20px; 
+  }
+
+  .recipe-card p {
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column; 
+    gap: 10px; 
+    padding: 10px;
+  }
+
+  header .logo {
+    font-size: 18px; 
+  }
+
+  header nav ul {
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .recipes-container {
+    top: 180px; 
+  }
+
+  .recipes-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+</style>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Culinary Canvas</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Recipes Section -->
+  <div class="recipes-container">
+    <div class="recipes-grid" id="recipes-grid">
+      <!-- Recipes will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- JavaScript to load recipes -->
+  <script>
+    // Sample recipe data
+    const recipes = [
+      { name: 'Pasta Carbonara', description: 'Classic Italian pasta dish', image: 'pexels-polina-tankilevitch-4518846.jpg' },
+      { name: 'Chicken Stir-Fry', description: 'Quick and healthy Asian dish', image: 'pexels-huzaifabukhari-16845748.jpg' },
+      { name: 'Greek Salad', description: 'Fresh Mediterranean salad', image: 'pexels-shameel-mukkath-3421394-14775609.jpg' },
+      { name: 'Chocolate Cake', description: 'Rich and decadent dessert', image: 'pexels-delphine-hourlay-91322-691152.jpg' },
+      { name: 'Beef Tacos', description: 'Spicy Mexican favorite', image: 'pexels-jeswin-5454019.jpg' },
+      { name: 'Sushi Rolls', description: 'Fresh Japanese delicacy', image: 'pexels-anil-sharma-2149101452-30557704.jpg' },
+      { name: 'Caesar Salad', description: 'Classic romaine lettuce salad', image: 'pexels-nay-nyo-727253247-27603332.jpg' },
+      { name: 'Pizza Margherita', description: 'Traditional Italian pizza', image: 'pexels-semsibelli-29270780.jpg' },
+      { name: 'French Toast', description: 'Sweet breakfast classic', image: 'pexels-babumoshaaye-30458468.jpg' },
+      { name: 'Vegetable Curry', description: 'Aromatic Indian dish', image: 'pexels-dbaler-17486827.jpg' }
+    ];
+
+    // Function to dynamically load recipes
+    function loadRecipes() {
+      const recipesGrid = document.getElementById('recipes-grid');
+
+      recipes.forEach(recipe => {
+        const recipeCard = document.createElement('div');
+        recipeCard.classList.add('recipe-card');
+
+        recipeCard.innerHTML = `
+          <img src="assests/${recipe.image}" alt="${recipe.name}">
+          <h3>${recipe.name}</h3>
+          <p>${recipe.description}</p>
+        `;
+
+        recipesGrid.appendChild(recipeCard);
+      });
+    }
+
+    // Load recipes when the page loads
+    window.onload = loadRecipes;
+  </script>
+</body>
+</html>
